@@ -1,0 +1,21 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+const int MAX_ARRAY_SIZE = 20;
+void loadArray(int*);
+void showArray(int*);
+int getMax(int*);
+int main()	
+int* numbers = nullptr;
+numbers = new int[MAX_ARRAY_SIZE];
+loadArray(numbers);
+showArray(numbers);
+return 0;
+void loadArray(int* numberArray)
+ifstream fileToRead;
+if (fileToRead.is_open())
+void showArray(int* numberArray)
+int getMax(int* numberArray)
+int max = *numberArray;
+max = *(numberArray + i);
+return max;
