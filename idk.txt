@@ -1,0 +1,17 @@
+Main Menu 									cc
+Options Menu									cc
+Information Screen for the player						cc
+Menu Music									cc
+Quit button to be able to leave the game in the main game			cc
+High score page with reset option						cc
+Button Sound Effects								cc
+Credits Page									cc
+high score at the top of page							cc
+Game over page									cc
+
+
+
+c = created
+cc = created and coded
+
+
