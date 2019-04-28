@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class FruitSpawner : MonoBehaviour {
 
-	public GameObject fruitPrefab;
+	public static GameObject fruitPrefab;
+
+    public static float size;
+    //public GameObject orangePrefab;
+    //public GameObject melonPrefab;
+
+    //public GameObject fruitSize;
 	public Transform[] spawnPoints;
 
-	public float minDelay = .1f;
-	public float maxDelay = 1f;
+	public static float minDelay = .1f;
+	public static float maxDelay = 1f;
+
+    //public static float height, width;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +35,10 @@ public class FruitSpawner : MonoBehaviour {
 			Transform spawnPoint = spawnPoints[spawnIndex];
 
 			GameObject spawnedFruit = Instantiate(fruitPrefab, spawnPoint.position, spawnPoint.rotation);
-			Destroy(spawnedFruit, 5f);
+            spawnedFruit.transform.localScale = new Vector3(size, size, 1);
+            //width = spawnedFruit.GetComponent<SpriteRenderer>().sprite.rect.width;
+            //height = spawnedFruit.GetComponent<SpriteRenderer>().sprite.rect.height;
+            Destroy(spawnedFruit, 5f);
 		}
 	}
 	

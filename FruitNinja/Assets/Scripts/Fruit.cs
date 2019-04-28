@@ -5,9 +5,9 @@ using UnityEngine;
 public class Fruit : MonoBehaviour {
 
 	public GameObject fruitSlicedPrefab;
-	public float startForce = 15f;
+	public static float startForce = 15f;
 
-	Rigidbody2D rb;
+	public static Rigidbody2D rb;
 
 	void Start ()
 	{
@@ -24,7 +24,8 @@ public class Fruit : MonoBehaviour {
 			Quaternion rotation = Quaternion.LookRotation(direction);
 
 			GameObject slicedFruit = Instantiate(fruitSlicedPrefab, transform.position, rotation);
-			Destroy(slicedFruit, 3f);
+            slicedFruit.transform.localScale = new Vector3(FruitSpawner.size, FruitSpawner.size, 1);
+            Destroy(slicedFruit, 3f);
 			Destroy(gameObject);
 		}
 	}

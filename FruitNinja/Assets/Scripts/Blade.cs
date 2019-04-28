@@ -7,6 +7,9 @@ public class Blade : MonoBehaviour {
 	public GameObject bladeTrailPrefab;
 	public float minCuttingVelocity = .001f;
 
+    public TrailRenderer tr;
+
+    public static float bladeSize;
 	bool isCutting = false;
 
 	Vector2 previousPosition;
@@ -37,7 +40,8 @@ public class Blade : MonoBehaviour {
 		if (isCutting)
 		{
 			UpdateCut();
-		}
+            currentBladeTrail.transform.localScale = new Vector3(bladeSize, bladeSize, 1);
+        }
 
 	}
 
@@ -62,6 +66,8 @@ public class Blade : MonoBehaviour {
 	{
 		isCutting = true;
 		currentBladeTrail = Instantiate(bladeTrailPrefab, transform);
+        tr = currentBladeTrail.GetComponent<TrailRenderer>();
+        tr.widthMultiplier = bladeSize;
 		previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 		circleCollider.enabled = false;
 	}

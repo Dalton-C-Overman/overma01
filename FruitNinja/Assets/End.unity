@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 9050183}
   - component: {fileID: 9050182}
   - component: {fileID: 9050184}
+  - component: {fileID: 9050185}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9050181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f84fe467ccac084886143f579111491, type: 3}
   m_Name: 
@@ -173,9 +174,20 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9050181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08a9a616d7973334783213010bd724b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9050185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9050181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9802fdd18ffcc574a8bf53e167a9984f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &70657722
@@ -489,7 +501,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Frogger Replica
+  m_Text: Fruit Slicer
 --- !u!222 &275020327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1329,7 +1341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits to Brackeys for original Frogger Replica game
+  m_Text: Credits to Brackeys for original Fruit Slicer game
 --- !u!222 &1297090231
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1550,7 +1562,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9050184}
+      - m_Target: {fileID: 9050185}
         m_MethodName: loadMenu
         m_Mode: 1
         m_Arguments:
@@ -1748,7 +1760,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9050184}
+      - m_Target: {fileID: 9050185}
         m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
