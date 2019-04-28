@@ -20,6 +20,8 @@ public class OptionsMain : MonoBehaviour {
 
     public GameObject orange;
     public GameObject melon;
+
+    public static bool eligible = false;
     /*
     private void Awake()
     {
@@ -112,15 +114,32 @@ public class OptionsMain : MonoBehaviour {
         switch (gravity.value)
         {
             case 1://low
-                Fruit.rb.gravityScale = .5f;
+                FruitSpawner.gravity = -.01f;
                 break;
             case 2://regular
-                Fruit.rb.gravityScale = 1;
+                FruitSpawner.gravity = -1;
                 break;
             case 3://high
-                Fruit.rb.gravityScale = 1.5f;
+                FruitSpawner.gravity = -2f;
                 break;
         }
 
+        switch (gameMode.value)
+        {
+            case 1://unlimited
+                FruitSpawner.time = 999f;
+                break;
+            case 2://1 minute
+                FruitSpawner.time = 1*60f;
+                break;
+            case 3://3 minute
+                FruitSpawner.time = 3*60f;
+                break;
+        }
+
+        if (gameMode.value == 2 && gravity.value == 2 && bladeSize.value == 2 && fruitSpeed.value == 2 && spawnSpeed.value == 2 && fruitSize.value == 2)
+            eligible = true;
+        else
+            eligible = false;
     }
 }

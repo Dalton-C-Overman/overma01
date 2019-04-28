@@ -25,4 +25,9 @@ public class Buttons : MonoBehaviour {
     {
         SceneManager.LoadScene("End");
     }
+
+    public void currentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
