@@ -144,11 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174059360ebc1734b9da707e9eb82660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerName: {fileID: 363456811}
-  playerScore1: {fileID: 1859851584}
-  playerScore2: {fileID: 1123270450}
-  playerScore3: {fileID: 120217918}
-  ReadPlayerData: []
 --- !u!4 &9050183
 Transform:
   m_ObjectHideFlags: 0
@@ -173,19 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f84fe467ccac084886143f579111491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore1: {fileID: 1951498435}
-  highScore2: {fileID: 114073363}
-  highScore3: {fileID: 1812962027}
-  highScore4: {fileID: 0}
-  highScore5: {fileID: 0}
-  nameHighScore1: {fileID: 1714919676}
-  nameHighScore2: {fileID: 916219770}
-  nameHighScore3: {fileID: 1320395241}
-  nameHighScore4: {fileID: 0}
-  nameHighScore5: {fileID: 0}
-  name: {fileID: 0}
-  score: {fileID: 0}
-  lives: {fileID: 0}
 --- !u!114 &9050185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9050182}
+      - m_Target: {fileID: 9050187}
         m_MethodName: LoadPlayerData
         m_Mode: 1
         m_Arguments:
